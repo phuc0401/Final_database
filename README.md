@@ -78,10 +78,10 @@ The application focuses on:
 sports_ticketing_project/
 │
 ├── docs/
-│   ├── Screenshots/
 │   ├── PerformanceOptimization.md
 │   ├── SecurityPlan.md
-│   └── Report.docx
+│   
+│   
 │
 ├── python/
 │   ├── auth.py
@@ -230,29 +230,16 @@ The system provides a console-based interface for:
 
 ---
 
-# 📸 Screenshots
 
-Screenshots are available in:
 
-```text
-/docs/Screenshots
-```
 
-Including:
-- booking flow
-- OTP verification
-- revenue reports
-- security validation
-- database schema
-
----
 
 # ⚙️ Installation Guide
 
 ## 1️⃣ Clone Repository
 
 ```bash
-git clone https://github.com/yourusername/sports-ticketing-system.git
+git clone https://github.com/phuc0401/Final_database.git
 ```
 
 ---
@@ -309,15 +296,8 @@ python ui_console.py
 
 ---
 
-# 🎥 Demo Video
 
-Youtube Demo:
 
-```text
-https://youtube.com/your-demo-link
-```
-
----
 
 # 🔮 Future Improvements
 
