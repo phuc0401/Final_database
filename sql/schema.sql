@@ -65,7 +65,7 @@ CREATE TABLE Bookings (
 
 CREATE TABLE Users (
   UserID INT AUTO_INCREMENT PRIMARY KEY,
-  Username VARCHAR(50) UNIQUE,
-  PasswordHash VARCHAR(255),
+  Username VARCHAR(50) UNIQUE NOT NULL ,
+  PasswordHash VARCHAR(255) NOT NULL,
   Role ENUM('customer','cashier','manager','admin')
 );
