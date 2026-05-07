@@ -310,6 +310,7 @@ Possible future enhancements:
 - Mobile application
 - Email notifications
 
+
 ---
 
 # 👨‍💻 Author

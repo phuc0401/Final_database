@@ -62,19 +62,23 @@ def main():
             print(f"\n  ✅ Đăng nhập thành công!!!")
 
         elif choice == "2":
-            phone = input("  Số điện thoại: ")
+            phone = input("  Số điện thoại: ").strip()
+            name = input("  Tên khách hàng: ").strip()
+            address = input("  Địa chỉ: ").strip()
+            password = input("  Mật khẩu: ").strip()
+            confirm_password = input("  Xác nhận mật khẩu: ").strip()
 
-            if get_customer_info_by_phone(phone):
-                print("\n  ⚠️ Số điện thoại này đã được đăng ký. Vui lòng dùng số khác hoặc đăng nhập.")
-                continue   # quay lại menu chính
+            if not phone or not name or not address or not password or not confirm_password:
+                print("\n  ❌ Vui lòng nhập đầy đủ thông tin!")
+                continue
 
-            name = input("  Tên khách hàng: ")
-            address = input("  Địa chỉ: ")
-            password = input("  Mật khẩu: ")
-            confirm_password = input("  Xác nhận mật khẩu: ")
 
             if password != confirm_password:
                 print("\n  ❌ Mật khẩu xác nhận không khớp. Vui lòng thử lại!\n")
+                continue   # quay lại menu chính
+
+            if get_customer_info_by_phone(phone):
+                print("\n  ⚠️ Số điện thoại này đã được đăng ký. Vui lòng dùng số khác hoặc đăng nhập.")
                 continue   # quay lại menu chính
 
             if register_customer(phone, password, name, address):
